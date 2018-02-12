@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            body{
+                display:flex;
+                justify-content: center;
+            }
+
+            .wrapper{
+                width:40%;
+            }
+
+            ol{
+                list-style: none;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="tabs">
+                <ol class="tabs-nav" data-type='tabs-nav'>
+                    <li>show tab one</li>
+                    <li>show tab two</li>
+                </ol>
+                <ol class="tabs-panes" data-type='tabs-panes'>
+                    <li>1</li>
+                    <li>2</li>
+                </ol>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="./index.js"></script>
+    <script type="text/javascript" src="../lib/dom.js"></script>
+    <script type="text/javascript">
+        var tab = new Tabs({
+            element:document.getElementsByClassName("tabs")[0]}
+        )
+    </script>
+</html>
