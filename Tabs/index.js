@@ -19,7 +19,8 @@ class Tabs{
 
     bindEvents(){
         dom.bind(this.options.element , 'clicks' , this.options.navs , function(e , el){
-            
+            let index = dom.index(el)
+            dom.
         })
     }
 
