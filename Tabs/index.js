@@ -4,9 +4,9 @@ class Tabs{
             element : '',
             navs : '[data-type="tabs-nav"]',
             panes: '[data-type="tabs-panes"]',
-            activeClass = 'activeTab'
+            activeClass : 'activeTab'
         }
-        options = Object.assign({defaultoption,options})
+        this.options = Object.assign({},defaultoption,options)
         this.checkOptions(options).bindEvents().setDefaultTab()
     }
 
@@ -18,15 +18,18 @@ class Tabs{
     }
 
     bindEvents(){
-        dom.bind(this.options.element , 'clicks' , this.options.navs , function(e , el){
+        dom.bind(this.options.element , 'clicks' , `${this.options.navs}>div` , (e , el) => {
             let index = dom.index(el)
-            dom.
+            let children = this.options.element.querySelector(this.options.panes).children
+            dom.uniqueClass(el,this.options.activeClass)
+            dom.uniqueClass(children[index],this.options.activeClass)
         })
+        return this
     }
 
     setDefaultTab(){
-        
+        this.options.element.querySelector(`${this.options.navs}>div:first-child`).click()
+        return this
     }
 }
 
-export default Tabs

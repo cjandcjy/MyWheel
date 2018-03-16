@@ -5,38 +5,81 @@
             body{
                 display:flex;
                 justify-content: center;
+                
             }
 
             .wrapper{
                 width:40%;
+                position: relative;
+                top:300px;
             }
 
-            ol{
-                list-style: none;
+            .tabs{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
             }
 
+            div.tabs-nav{
+                display: flex;
+                border:1px solid #e1e1e1;
+                border-right:0;
+                border-bottom:0;
+            }
+
+            div.tabs-panes{
+                display: flex;
+                border:1px solid #e1e1e1;
+                border-right:0;
+                border-bottom:0;
+            }
+            
+            div.nav{
+                border-right:1px solid #e1e1e1; 
+                flex-grow: 1;
+                height: 50px;
+                line-height: 50px;
+                background-color: #e2f1f1;
+                cursor: pointer;
+            }
+            div.nav:focus{
+                background-color: #e2d1d1;
+            }
+            div.pane{
+                border-right:1px solid #e1e1e1;
+                border-bottom:1px solid #e1e1e1;
+                flex-grow: 1;
+                height: 150px;
+                line-height: 150px;
+            }
+            .activeTab{
+                background-color: greenyellow;
+            }
 
         </style>
     </head>
     <body>
         <div class="wrapper">
             <div class="tabs">
-                <ol class="tabs-nav" data-type='tabs-nav'>
-                    <li>show tab one</li>
-                    <li>show tab two</li>
-                </ol>
-                <ol class="tabs-panes" data-type='tabs-panes'>
-                    <li>1</li>
-                    <li>2</li>
-                </ol>
+                <div class="tabs-nav" data-type='tabs-nav'>
+                    <div class='nav'>show tab one</div>
+                    <div class='nav'>show tab two</div>
+                </div>
+                <div class="tabs-panes" data-type='tabs-panes'>
+                    <div class='pane'>1</div>
+                    <div class='pane'>2</div>
+                </div>
             </div>
         </div>
     </body>
-    <script type="text/javascript" src="./index.js"></script>
-    <script type="text/javascript" src="../lib/dom.js"></script>
-    <script type="text/javascript">
+    <script src="index.js"></script>
+    <script src="../lib/dom.js"></script>
+    <script>
+        console.log("test case")
+        var el = document.querySelectorAll(".tabs")[0]
         var tab = new Tabs({
-            element:document.getElementsByClassName("tabs")[0]}
+            element:document.querySelectorAll(".tabs")[0]}
         )
+        
     </script>
 </html>
