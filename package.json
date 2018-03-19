@@ -1,0 +1,22 @@
+{
+  "name": "mywheel",
+  "version": "1.0.0",
+  "description": "造轮子联系",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjandcjy/MyWheel.git"
+  },
+  "keywords": [
+    "wheel"
+  ],
+  "author": "cj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjandcjy/MyWheel/issues"
+  },
+  "homepage": "https://github.com/cjandcjy/MyWheel#readme"
+}
