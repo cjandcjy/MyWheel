@@ -14,7 +14,7 @@ app.get('/upload',function(req,res){
     let options = {
         root:__dirname+'/upload/',
         headers:{
-            'content-type':'img/jpg'
+            'content-type':'image/jpeg'
         }
     }
     res.sendFile(key,options,function(err){

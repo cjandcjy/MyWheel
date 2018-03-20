@@ -1,0 +1,51 @@
+body{
+    background-color: aqua;
+    max-height: 100vh;
+    overflow:hidden; 
+    position: relative;
+    align-items: center;
+
+    &::before,&::after{
+        content:'';
+        position: absolute;
+        left: 50%;
+        min-width: 300vw;
+        min-height: 300vw;
+        background-color: #fff; 
+        animation-name: myrotate;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear; 
+    }
+
+    &::before{
+        bottom: 13vw; 
+        border-radius: 47%;
+    }
+    &::after{
+        bottom:10vw;
+        border-radius: 45%;
+        opacity: 0.5;
+    }
+
+    @keyframes myrotate {
+        0% {
+            transform: translate(-50%,0) rotateZ(0deg)
+        }
+        50% {
+            transform: translate(-50%,-2%) rotateZ(180deg)
+        }
+        100% {
+            transform: translate(-50%,0) rotateZ(360deg)
+        }
+    }
+    
+    h2 {
+        font-size: 3vw;
+        text-align: center;
+        color:black;
+        height: 100vh;
+        line-height: 140vh;
+        z-index: 10;
+    }
+}

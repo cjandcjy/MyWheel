@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/cjandcjy/MyWheel/issues"
   },
-  "homepage": "https://github.com/cjandcjy/MyWheel#readme"
+  "homepage": "https://github.com/cjandcjy/MyWheel#readme",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
 }
