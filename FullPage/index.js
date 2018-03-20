@@ -3,7 +3,7 @@ class FullPage{
         let defaultoptions = {
             element:null
         }
-        this.targetIndex = 1
+        this.targetIndex = 0
         this.animating = false
         this.tX = 0;
         this.tY = 0;
@@ -24,7 +24,7 @@ class FullPage{
 
     gotoSection(index){
         return new Promise((resolve,reject) => {
-            if(index<=0 || index>4){
+            if(index<0 || index>=this.options.element.children.length){
                 reject("超过界限了")
             }else{
                 let that = this
