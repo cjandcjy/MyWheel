@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul id='list'></ul>
+    <script>
+        //页面上有一个空的无序列表节点，用<ul></ul>表示，请往列表中插入3个<li> || 现在要求点击任意一个节点，显示该节点在列表中的index
+        function test1(){
+            var ndContainer = document.getElementById('list')
+            if(!ndContainer){
+                return
+            }
+            for(var i=0;i<3;i++){
+                var ndItem = document.createElement('li')
+                ndItem.innerText = i+1
+                ndItem.addEventListener('click',function(e){
+                    alert(ndItem.innerText)  //这里全部输出3 ，使用this.innerText或者let替换var
+                })
+                ndContainer.appendChild(ndItem)
+            }
+        }
+        
+        //如果插入300各节点，上述代码需要做修改吗？如何修改
+        function test2(){
+            var ndContainer = document.getElementById('list')
+            if(!ndContainer){
+                return 
+            }
+            for(var i=0;i<3;i++){
+                var ndItem = document.createElement('li')
+                ndItem.innerText = i+1
+                ndContainer.appendChild(ndItem)
+            }
+            ndContainer.addEventListener('click',function(e){
+                    const target = e.target
+                    if(target.nodeName=='LI' || target.tabName=='li'){
+                        alert(target.innerText)
+                    }
+            })
+        }
+    </script>
+</body>
+</html>
