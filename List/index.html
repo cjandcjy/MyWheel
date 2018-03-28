@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li.active{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <ul id='list'>
+        <li data-index='1'>1</li>
+        <li data-index='2'>2</li>
+        <li data-index='3'>3</li>
+        <li data-index='4'>4</li>
+    </ul>
+    <script>
+        let activeIndex = 1;
+
+        function active(index){
+            let list = document.getElementById('list')
+            list.querySelector('li[data-index="'+index+'"]').classList.add('active')
+            list.querySelector('li[data-index="'+activeIndex+'"]').classList.remove('active')
+            activeIndex = index
+        }
+
+        let list = document.getElementById('list')
+        list.addEventListener('click',function(e){
+            if(e.target.tagName==='LI'){
+                let index = e.target.dataset['index']
+                active(index)
+            }
+        })
+
+        active(activeIndex)
+
+    </script>
+</body>
+</html>

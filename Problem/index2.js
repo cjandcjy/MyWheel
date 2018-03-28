@@ -6,9 +6,9 @@ import { resolve } from "dns";
             console.log(i)
         }, 1000);   
     }
-
     console.log(i)
 
+    
 
 //如果期望代码的输出是 5 -> 0,1,2,3,4  , 
     //声明及执行的表达式  
