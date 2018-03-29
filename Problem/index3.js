@@ -19,7 +19,7 @@ console.log(obj.props.print())
 var print = obj.props.print
 console.log(print())
 
-//
+/////
 var obj = {
     a : 10 ,
     b : (i) => {
@@ -32,7 +32,7 @@ var obj = {
 obj.b() 
 obj.c()
 
-//
+/////
 var obj = {
     onething : (a) => {
         let b = a * 2
