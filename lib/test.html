@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="createElements(10000)">创建dom</button>
+</body>
+<script>
+    function createElements(count){
+        let startTime = new Date()
+        for(let i=0;i<count;i++){
+            let div = document.createElement('div')
+            div.appendChild(document.createTextNode(""+i))
+            document.body.appendChild(div)
+        }
+        setTimeout(() => {
+            console.log("### last: "+(new Date() - startTime))
+        }, 0);
+    }
+</script>
+</html>
+

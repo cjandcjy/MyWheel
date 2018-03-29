@@ -1,7 +1,7 @@
 {
   "name": "mywheel",
   "version": "1.0.0",
-  "description": "造轮子联系",
+  "description": "造轮子系列",
   "main": "index.js",
   "scripts": {
     "test": "node index.js"

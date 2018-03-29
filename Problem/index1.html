@@ -1,3 +1,50 @@
+//介绍下你自己，为什么选择前端?
+
+//说下你所在的实验的研究方向？以及你的工作？
+
+//介绍下你的项目
+
+///css的集中定位方式？relative和absolute的主要区别
+是否保留在文档中的占位
+其父元素的定位方式对其有什么影响
+
+//CSS垂直水平居中？
+
+//flex布局用过吧？用过哪儿些？怎么设置水平垂直居中？justify-content, align-items
+flex-direction?
+
+//说下你的动画实现方法？transition和transform的区别，用css实现一个动画效果:有一个100px的盒子，鼠标停留的时候，宽度在3s内增加到300px
+div{
+    width:100px;
+    transition:width 3s
+}
+div:hover{
+    width:300px
+}
+
+//让一个100px的盒子在3s的时间内水平移动300px
+div{
+    widht:300px;
+    transition-time-function:linear;
+    transition-duration:3s;
+    transtion-delay:2s;
+    trasform:translateX(300px)  
+}
+
+
+//用css让dom元素不可见的方法
+
+//说下你知道http状态码？
+
+//webpack和npm有用过吗？
+
+//说下你对session和cookies的理解？知道sessionStorage和localstorage吗？
+
+//为什么var可以重复声明
+
+//JavaScript的事件机制，冒泡、捕获、传播、委托 ， e.stopPropagation  e.prentevent
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +66,7 @@
                 var ndItem = document.createElement('li')
                 ndItem.innerText = i+1
                 ndItem.addEventListener('click',function(e){
-                    alert(ndItem.innerText)  //这里全部输出3 ，使用this.innerText或者let替换var
+                    alert(ndItem.innerText)  //这里全部输出3 ，使用this.innerText或者let替换var 
                 })
                 ndContainer.appendChild(ndItem)
             }
