@@ -57,12 +57,16 @@ div{
     <ul id='list'></ul>
     <script>
         //页面上有一个空的无序列表节点，用<ul></ul>表示，请往列表中插入3个<li> || 现在要求点击任意一个节点，显示该节点在列表中的index
+        //页面上有一个空的无序列表节点，用<ul></ul>表示，请往列表中插入3个<li> 
+        // 现在要求点击任意一个节点，显示该节点在列表中的index
         function test1(){
             var ndContainer = document.getElementById('list')
             if(!ndContainer){
                 return
             }
             for(var i=0;i<3;i++){
+                //这里的var为什么可以重复声明？
+                //重复声明的时候会忽略之后的声明，且以后面的值覆盖前面的值
                 var ndItem = document.createElement('li')
                 ndItem.innerText = i+1
                 ndItem.addEventListener('click',function(e){

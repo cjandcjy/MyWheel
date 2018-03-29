@@ -1,0 +1,79 @@
+///css的集中定位方式？relative和absolute的主要区别
+是否保留在文档中的占位
+其父元素的定位方式对其有什么影响 
+
+100分
+
+
+//实现水平垂直居中
+
+80分
+
+//是否使用过flex布局，请问使用flex怎么设置垂直居中？
+
+0分
+
+//只允许使用css，让原始dom节点不可见的多种解决方案？
+
+
+
+
+//使用js实现一个持续的动画效果
+
+
+
+//css3动画有哪些实现方式？
+Transitions 、transforms和 Animations
+Transitions特点：平滑的改变CSS的值
+transforms特点：变换主要实现（拉伸，压缩，旋转，偏移）
+Animations特点：适用于CSS2，CSS3
+
+//react中实现动画效果?
+http://www.jb51.net/article/132537.htm
+
+<!DOCTYPE html>s
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box2{
+            height: 100px;
+            width:100px;
+            background-color:blue;
+        }
+
+        .level1{
+            position: relative;
+            top:100px;
+            left:100px;
+            height: 100px;
+            width:100px;
+            background-color: black;
+        }
+
+        .level2{
+            height: 20px;
+            width: 20px;
+            background-color:rebeccapurple;
+        }
+
+        .level3{
+            position: relative;
+            height: 20px;
+            width: 20px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class='box2'>
+    </div>
+    <div class='box level1'>
+        <div class='level2' ></div>
+        <div class='level3'></div>
+    </div>
+</body>
+</html>

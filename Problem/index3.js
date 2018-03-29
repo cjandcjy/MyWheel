@@ -13,6 +13,7 @@ var obj = {
     }
 }
 
+
 console.log(obj.props.print())
 
 var print = obj.props.print
