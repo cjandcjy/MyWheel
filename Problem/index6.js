@@ -15,7 +15,7 @@ var b = ["a","b"]
 // b ---> Array.prototype ---> Object.prototype ---> null 
 
 var c = function(){
-
+    
 }
 // c --->Function.prototype ---> Object.prototype ---> null
 
